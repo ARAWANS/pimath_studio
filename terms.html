@@ -12,28 +12,65 @@
       color: #333;
       margin: 0;
       padding: 0 20px 40px;
-      line-height: 1.6;
+      line-height: 1.7;
     }
+
     header, footer {
       text-align: center;
       padding: 15px;
     }
+
     header h1 {
       color: #222;
       margin-bottom: 10px;
     }
+
+    .topbar {
+      max-width: 900px;
+      margin: 0 auto 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
     nav {
       text-align: center;
-      margin-bottom: 20px;
     }
+
     nav a {
       color: #0078d7;
       text-decoration: none;
       margin: 0 5px;
     }
+
     nav a:hover {
       text-decoration: underline;
     }
+
+    .lang-switch {
+      display: inline-flex;
+      border: 1px solid #ddd;
+      border-radius: 999px;
+      overflow: hidden;
+      background: #fff;
+    }
+
+    .lang-switch button {
+      border: none;
+      background: transparent;
+      padding: 8px 14px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .lang-switch button.active {
+      background: #0078d7;
+      color: #fff;
+      font-weight: 600;
+    }
+
     main {
       max-width: 900px;
       margin: 0 auto;
@@ -42,100 +79,343 @@
       border-radius: 12px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     }
+
     h2 {
       color: #222;
-      margin-top: 25px;
+      margin-top: 26px;
+      margin-bottom: 10px;
     }
+
+    p, li {
+      font-size: 16px;
+    }
+
+    ul {
+      padding-left: 22px;
+    }
+
     footer {
       font-size: 0.9em;
       color: #777;
       margin-top: 40px;
+    }
+
+    .lang {
+      display: none;
+    }
+
+    .lang.active {
+      display: block;
+    }
+
+    .last-updated {
+      color: #666;
+      font-size: 14px;
+      margin-top: -4px;
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 640px) {
+      body {
+        padding: 0 12px 28px;
+      }
+
+      main {
+        padding: 18px;
+      }
+
+      .topbar {
+        flex-direction: column;
+      }
     }
   </style>
 </head>
 <body>
 
   <header>
-    <h1>Pimath Terms of Use</h1>
-        <nav>
-      <a href="index.html">Home</a> |
-      <a href="privacy.html">Privacy Policy</a> |
-      <a href="terms.html">Terms of Use</a> |
-      <a href="profile.html">Profile</a> |
-      <a href="FAQ.html">FAQ</a>
-    </nav>
+    <h1 id="page-title">Pimath Terms of Use</h1>
   </header>
 
+  <div class="topbar">
+    <nav>
+      <a href="index.html" data-en="Home" data-th="หน้าแรก">Home</a> |
+      <a href="privacy.html" data-en="Privacy Policy" data-th="นโยบายความเป็นส่วนตัว">Privacy Policy</a> |
+      <a href="terms.html" data-en="Terms of Use" data-th="ข้อกำหนดการใช้งาน">Terms of Use</a> |
+      <a href="profile.html" data-en="Profile" data-th="โปรไฟล์">Profile</a> |
+      <a href="FAQ.html" data-en="FAQ" data-th="คำถามที่พบบ่อย">FAQ</a>
+    </nav>
+
+    <div class="lang-switch" aria-label="Language switcher">
+      <button id="btn-en" class="active" onclick="setLanguage('en')">EN</button>
+      <button id="btn-th" onclick="setLanguage('th')">ไทย</button>
+    </div>
+  </div>
+
   <main>
-    <h2>1. Introduction</h2>
-    <p>
-      Welcome to Pimath. By accessing or using our application, you acknowledge and agree to be bound by these Terms of Use.
-      Please read them carefully before using the app. If you do not agree, you must discontinue use immediately.
-    </p>
+    <!-- English -->
+    <section id="lang-en" class="lang active">
+      <p class="last-updated">Last updated: March 24, 2026</p>
 
-    <h2>2. Registration and User Access</h2>
-    <p>
-      Users may register using their <strong>Google</strong> or <strong>Apple</strong> accounts for identity verification.  
-      Alternatively, you may continue as a <strong>Guest</strong> without creating an account.  
-      Free access may be available in certain regions according to the company’s discretion, which may change at any time.  
-      Monthly subscribers will retain account progress and in-app coins, whereas free users are not guaranteed data retention.
-    </p>
+      <h2>1. Introduction</h2>
+      <p>
+        Welcome to Pimath. These Terms of Use ("Terms") govern your access to and use of the Pimath website,
+        mobile application, and related services (collectively, the "Service") operated by Pimath Studio
+        ("Pimath", "we", "us", or "our").
+        By accessing or using the Service, you agree to be bound by these Terms.
+        If you do not agree, please stop using the Service immediately.
+      </p>
 
-    <h2>3. Account Deletion</h2>
-    <p>
-      You may delete your account anytime by navigating to <strong>Settings → User Profile → Delete Account</strong>.  
-      Upon confirmation, your data can be recovered within <strong>30 days</strong>.  
-      After that period, all information will be <strong>permanently deleted</strong> from our systems.
-    </p>
+      <h2>2. User Types</h2>
+      <p>Pimath may offer different access levels, including:</p>
+      <ul>
+        <li><strong>Subscriber:</strong> paid monthly users who may receive full content access, progress saving, and an ad-free experience during an active subscription period.</li>
+        <li><strong>Trial User:</strong> users who receive temporary or promotional access to certain features without charge. Trial benefits may be modified, restricted, suspended, or discontinued at any time.</li>
+        <li><strong>Guest:</strong> users who access the Service without a paid subscription or registered account. Certain features, including progress saving and some content access, may be unavailable.</li>
+      </ul>
 
-    <h2>4. Refunds and Compensation</h2>
-    <p>
-      Pimath has a <strong>no-refund policy</strong> in accordance with our Terms of Use.  
-      However, users may submit complaints or technical issues via  
-      <a href="mailto:pimath.studio@gmail.com">pimath.studio@gmail.com</a>.  
-      In case of valid issues, we may offer <strong>digital compensation</strong> such as in-app coins or other corrective measures.
-    </p>
+      <h2>3. Registration and Account Access</h2>
+      <p>
+        Users may sign in using supported third-party providers such as Google or Apple, or continue as a Guest where available.
+        You are responsible for maintaining the security of your account, device, and login credentials.
+        We may suspend or terminate access if we reasonably believe you have violated these Terms or misused the Service.
+      </p>
 
-    <h2>5. Ownership and Copyright</h2>
-    <p>
-      All content, source code, designs, graphics, and other materials within Pimath are the exclusive property and copyright
-      of the developer. You may not copy, reproduce, distribute, or modify any part of the app without written permission.
-    </p>
+      <h2>4. Account Deletion</h2>
+      <p>
+        You may delete your account by navigating to <strong>Settings → User Profile → Delete Account</strong>, if this feature is available.
+        After deletion is requested, certain data may remain recoverable for up to <strong>30 days</strong>.
+        After that period, eligible account data will be permanently deleted or anonymized, subject to applicable law,
+        backup retention, fraud prevention, dispute resolution, or legitimate business needs.
+      </p>
 
-    <h2>6. Acceptance of Risk and Limitation of Liability</h2>
-    <p>
-      The app and all its content are provided <strong>“as is”</strong> and <strong>“as available”</strong> without any warranties,
-      express or implied.  
-      By using the app, you agree to accept all potential technical risks, data loss, or performance limitations.  
-      You further agree not to claim damages, losses, or demand refunds arising from the use or malfunction of the app.
-    </p>
+      <h2>5. Subscription, Billing, and Cancellation</h2>
+      <p>
+        Certain features of the Service require a paid subscription.
+        Subscription pricing, billing cycle, and included benefits will be presented at the point of purchase.
+        Billing cycles are generally monthly and may be up to 30 days unless otherwise stated.
+      </p>
+      <p>
+        If you purchase through Apple App Store, Google Play, or another third-party platform,
+        billing, renewal, cancellation, and refund rights may also be subject to that platform’s own terms and policies.
+        You may cancel your subscription at any time, but cancellation will usually apply to the next billing cycle.
+        You will generally retain access until the end of the period already paid for.
+      </p>
 
-    <h2>7. Legal Jurisdiction</h2>
-    <p>
-      By using Pimath, you acknowledge and agree that these Terms of Use are governed by and construed in accordance with the
-      laws of the jurisdiction in which the company owning Pimath is legally registered.  
-      Any disputes arising under or in connection with these Terms shall be subject exclusively to the competent courts of that jurisdiction.
-    </p>
+      <h2>6. Refund Policy</h2>
+      <p>
+        Refund requests are reviewed on a case-by-case basis, taking into account the reason for the request,
+        technical issues, purchase history, applicable law, and the rules of the platform through which the purchase was made.
+        Refunds are not guaranteed unless required by applicable law.
+      </p>
+      <p>
+        If your purchase was made through Apple App Store, Google Play, or another third-party platform,
+        you may need to submit your refund request through that platform, and that platform’s refund process may apply.
+      </p>
 
-    <h2>8. Updates to the Terms</h2>
-    <p>
-      Pimath reserves the right to modify or update these Terms of Use at any time without prior notice.  
-      Continued use of the app following such changes constitutes your acceptance of the revised Terms.
-    </p>
+      <h2>7. Ownership and Intellectual Property</h2>
+      <p>
+        All content, source code, designs, graphics, logos, text, audio, and other materials in Pimath are owned by
+        or licensed to Pimath Studio and are protected by applicable intellectual property laws.
+        Except for personal use expressly permitted by these Terms, you may not copy, reproduce, distribute, modify,
+        reverse engineer, or commercially exploit any part of the Service without prior written consent.
+      </p>
 
-    <h2>9. Contact Information</h2>
-    <p>
-      For any questions, feedback, or legal inquiries regarding these Terms, please contact:  
-      <a href="mailto:pimath.studio@gmail.com">pimath.studio@gmail.com</a>
-    </p>
+      <h2>8. Service Availability</h2>
+      <p>
+        We may modify, update, suspend, or discontinue any part of the Service at any time.
+        We do not guarantee that the Service will always be available, uninterrupted, error-free,
+        or compatible with all devices, browsers, or operating systems.
+      </p>
+
+      <h2>9. Disclaimer of Warranties</h2>
+      <p>
+        The Service is provided on an <strong>“as is”</strong> and <strong>“as available”</strong> basis to the fullest extent permitted by law.
+        We make no warranties, express or implied, regarding availability, reliability, accuracy,
+        fitness for a particular purpose, or non-infringement.
+      </p>
+
+      <h2>10. Limitation of Liability</h2>
+      <p>
+        To the fullest extent permitted by applicable law, Pimath Studio shall not be liable for any indirect,
+        incidental, special, consequential, or punitive damages, or for any loss of data, profits, revenue,
+        business opportunities, or goodwill arising out of or related to your use of, or inability to use, the Service.
+      </p>
+      <p>
+        Nothing in these Terms excludes or limits any liability that cannot be excluded or limited under applicable law.
+      </p>
+
+      <h2>11. Governing Law</h2>
+      <p>
+        These Terms are governed by the laws of <strong>Thailand</strong>, without regard to conflict of law principles.
+        Any dispute arising from or relating to these Terms or the Service shall be subject to the jurisdiction
+        of the competent courts of Thailand, unless applicable consumer protection law provides otherwise.
+      </p>
+
+      <h2>12. Changes to These Terms</h2>
+      <p>
+        We may update these Terms from time to time.
+        When material changes are made, we may notify users through the website, the app, or other reasonable means.
+        Your continued use of the Service after updated Terms become effective constitutes acceptance of those updated Terms.
+      </p>
+
+      <h2>13. Contact Information</h2>
+      <p>
+        For questions, feedback, support requests, or legal inquiries regarding these Terms, please contact:
+        <a href="mailto:pimath.studio@gmail.com">pimath.studio@gmail.com</a>
+      </p>
+    </section>
+
+    <!-- Thai -->
+    <section id="lang-th" class="lang">
+      <p class="last-updated">อัปเดตล่าสุด: 24 มีนาคม 2026</p>
+
+      <h2>1. บทนำ</h2>
+      <p>
+        ยินดีต้อนรับสู่ Pimath ข้อกำหนดการใช้งานฉบับนี้ ("ข้อกำหนด") ใช้บังคับต่อการเข้าถึงและการใช้งานเว็บไซต์
+        แอปพลิเคชันมือถือ และบริการที่เกี่ยวข้องของ Pimath (รวมเรียกว่า "บริการ") ซึ่งดำเนินการโดย Pimath Studio
+        ("Pimath", "เรา")
+        เมื่อท่านเข้าถึงหรือใช้งานบริการ ถือว่าท่านตกลงผูกพันตามข้อกำหนดนี้
+        หากท่านไม่ตกลง โปรดหยุดใช้งานบริการทันที
+      </p>
+
+      <h2>2. ประเภทผู้ใช้</h2>
+      <p>Pimath อาจมีระดับการใช้งานที่แตกต่างกัน ดังนี้</p>
+      <ul>
+        <li><strong>Subscriber:</strong> ผู้ใช้ที่ชำระค่าสมัครสมาชิกแบบรายเดือน ซึ่งอาจได้รับสิทธิ์เข้าถึงเนื้อหาเต็ม บันทึกความก้าวหน้า และใช้งานแบบไม่มีโฆษณาในช่วงที่สมาชิกยังมีผล</li>
+        <li><strong>Trial User:</strong> ผู้ใช้ที่ได้รับสิทธิ์ทดลองหรือสิทธิ์ส่งเสริมการขายโดยไม่เสียค่าใช้จ่ายสำหรับบางฟีเจอร์ สิทธิ์ทดลองอาจถูกเปลี่ยนแปลง จำกัด ระงับ หรือยกเลิกได้ทุกเมื่อ</li>
+        <li><strong>Guest:</strong> ผู้ใช้ที่เข้าใช้งานโดยไม่สมัครสมาชิกแบบชำระเงินหรือไม่ได้ลงทะเบียนบัญชี ฟีเจอร์บางอย่าง รวมถึงการบันทึกความก้าวหน้าและการเข้าถึงเนื้อหาบางส่วน อาจไม่พร้อมใช้งาน</li>
+      </ul>
+
+      <h2>3. การสมัครใช้งานและการเข้าถึงบัญชี</h2>
+      <p>
+        ผู้ใช้อาจเข้าสู่ระบบผ่านผู้ให้บริการภายนอกที่รองรับ เช่น Google หรือ Apple หรือใช้งานแบบ Guest ในกรณีที่ระบบรองรับ
+        ท่านมีหน้าที่ดูแลความปลอดภัยของบัญชี อุปกรณ์ และข้อมูลการเข้าสู่ระบบของท่าน
+        เราอาจระงับหรือยุติการเข้าถึง หากมีเหตุอันสมควรเชื่อว่าท่านฝ่าฝืนข้อกำหนดนี้หรือใช้งานบริการในทางที่ไม่เหมาะสม
+      </p>
+
+      <h2>4. การลบบัญชี</h2>
+      <p>
+        ท่านอาจลบบัญชีได้ผ่านเมนู <strong>Settings → User Profile → Delete Account</strong> หากระบบมีฟีเจอร์นี้
+        หลังจากมีการร้องขอลบบัญชี ข้อมูลบางส่วนอาจยังสามารถกู้คืนได้ภายในระยะเวลาไม่เกิน <strong>30 วัน</strong>
+        หลังจากนั้น ข้อมูลบัญชีที่เข้าเกณฑ์จะถูกลบถาวรหรือทำให้ไม่สามารถระบุตัวตนได้
+        ทั้งนี้อาจมีข้อมูลบางส่วนที่ต้องเก็บไว้ตามกฎหมาย การสำรองข้อมูล การป้องกันการทุจริต การระงับข้อพิพาท
+        หรือความจำเป็นทางธุรกิจโดยชอบ
+      </p>
+
+      <h2>5. การสมัครสมาชิก การเรียกเก็บเงิน และการยกเลิก</h2>
+      <p>
+        ฟีเจอร์บางส่วนของบริการอาจต้องใช้การสมัครสมาชิกแบบชำระเงิน
+        ราคา รอบบิล และสิทธิ์ที่ได้รับจะแสดงให้ทราบในขั้นตอนการซื้อ
+        โดยทั่วไปรอบบิลจะเป็นรายเดือนและอาจไม่เกิน 30 วัน เว้นแต่จะระบุไว้เป็นอย่างอื่น
+      </p>
+      <p>
+        หากท่านซื้อผ่าน Apple App Store, Google Play หรือแพลตฟอร์มภายนอกอื่น
+        การเรียกเก็บเงิน การต่ออายุ การยกเลิก และสิทธิ์ในการขอคืนเงินอาจอยู่ภายใต้ข้อกำหนดและนโยบายของแพลตฟอร์มนั้นเพิ่มเติม
+        ท่านสามารถยกเลิกการสมัครสมาชิกได้ทุกเมื่อ แต่โดยทั่วไปการยกเลิกจะมีผลในรอบบิลถัดไป
+        และท่านมักยังคงใช้สิทธิ์ได้จนกว่าจะสิ้นสุดระยะเวลาที่ได้ชำระไว้แล้ว
+      </p>
+
+      <h2>6. นโยบายการคืนเงิน</h2>
+      <p>
+        คำขอคืนเงินจะได้รับการพิจารณาเป็นรายกรณี โดยคำนึงถึงเหตุผลของคำขอ ปัญหาทางเทคนิค ประวัติการซื้อ
+        กฎหมายที่ใช้บังคับ และกฎของแพลตฟอร์มที่ใช้ในการซื้อ
+        การคืนเงินไม่ได้รับประกันเสมอไป เว้นแต่กฎหมายที่ใช้บังคับกำหนดไว้เป็นอย่างอื่น
+      </p>
+      <p>
+        หากการซื้อของท่านเกิดขึ้นผ่าน Apple App Store, Google Play หรือแพลตฟอร์มภายนอกอื่น
+        ท่านอาจต้องยื่นคำขอคืนเงินผ่านแพลตฟอร์มนั้น และกระบวนการคืนเงินของแพลตฟอร์มนั้นอาจมีผลใช้บังคับ
+      </p>
+
+      <h2>7. ความเป็นเจ้าของและทรัพย์สินทางปัญญา</h2>
+      <p>
+        เนื้อหา ซอร์สโค้ด งานออกแบบ กราฟิก โลโก้ ข้อความ เสียง และองค์ประกอบอื่นทั้งหมดใน Pimath
+        เป็นทรัพย์สินของหรือได้รับอนุญาตให้ใช้โดย Pimath Studio และได้รับความคุ้มครองตามกฎหมายทรัพย์สินทางปัญญาที่เกี่ยวข้อง
+        นอกจากการใช้งานส่วนบุคคลที่ข้อกำหนดนี้อนุญาตไว้โดยชัดแจ้งแล้ว
+        ท่านไม่มีสิทธิ์คัดลอก ทำซ้ำ แจกจ่าย ดัดแปลง ถอดรหัสย้อนกลับ หรือแสวงหาประโยชน์ทางการค้าจากส่วนใดของบริการ
+        โดยไม่ได้รับความยินยอมเป็นลายลักษณ์อักษรล่วงหน้า
+      </p>
+
+      <h2>8. ความพร้อมใช้งานของบริการ</h2>
+      <p>
+        เราอาจปรับปรุง แก้ไข ระงับ หรือยุติส่วนใดส่วนหนึ่งของบริการเมื่อใดก็ได้
+        เราไม่รับประกันว่าบริการจะพร้อมใช้งานตลอดเวลา ไม่สะดุด ปราศจากข้อผิดพลาด
+        หรือสามารถใช้งานร่วมกับทุกอุปกรณ์ เบราว์เซอร์ หรือระบบปฏิบัติการได้
+      </p>
+
+      <h2>9. การปฏิเสธการรับประกัน</h2>
+      <p>
+        บริการนี้จัดให้ตามสภาพที่เป็นอยู่ <strong>“ตามสภาพที่เป็น”</strong> และ <strong>“ตามที่มีอยู่”</strong>
+        ภายในขอบเขตสูงสุดเท่าที่กฎหมายอนุญาต
+        เราไม่ให้คำรับประกันใด ๆ ทั้งโดยชัดแจ้งหรือโดยปริยาย เกี่ยวกับความพร้อมใช้งาน ความน่าเชื่อถือ ความถูกต้อง
+        ความเหมาะสมสำหรับวัตถุประสงค์เฉพาะ หรือการไม่ละเมิดสิทธิของบุคคลอื่น
+      </p>
+
+      <h2>10. การจำกัดความรับผิด</h2>
+      <p>
+        ภายในขอบเขตสูงสุดเท่าที่กฎหมายที่ใช้บังคับอนุญาต Pimath Studio จะไม่รับผิดต่อความเสียหายทางอ้อม
+        ความเสียหายโดยบังเอิญ ความเสียหายพิเศษ ความเสียหายสืบเนื่อง ความเสียหายเชิงลงโทษ
+        หรือการสูญเสียข้อมูล กำไร รายได้ โอกาสทางธุรกิจ หรือชื่อเสียง
+        ที่เกิดจากหรือเกี่ยวข้องกับการใช้หรือไม่สามารถใช้บริการได้
+      </p>
+      <p>
+        ไม่มีข้อความใดในข้อกำหนดนี้ที่มีผลตัดหรือจำกัดความรับผิดซึ่งกฎหมายที่ใช้บังคับไม่อนุญาตให้ตัดหรือจำกัด
+      </p>
+
+      <h2>11. กฎหมายที่ใช้บังคับ</h2>
+      <p>
+        ข้อกำหนดนี้อยู่ภายใต้บังคับแห่งกฎหมายของ <strong>ประเทศไทย</strong>
+        โดยไม่คำนึงถึงหลักกฎหมายขัดกัน
+        ข้อพิพาทใด ๆ ที่เกิดขึ้นจากหรือเกี่ยวข้องกับข้อกำหนดนี้หรือบริการ
+        ให้อยู่ภายใต้อำนาจพิจารณาของศาลไทยที่มีเขตอำนาจ เว้นแต่กฎหมายคุ้มครองผู้บริโภคที่ใช้บังคับจะกำหนดไว้เป็นอย่างอื่น
+      </p>
+
+      <h2>12. การเปลี่ยนแปลงข้อกำหนด</h2>
+      <p>
+        เราอาจปรับปรุงข้อกำหนดนี้เป็นครั้งคราว
+        หากมีการเปลี่ยนแปลงสาระสำคัญ เราอาจแจ้งให้ผู้ใช้ทราบผ่านทางเว็บไซต์ แอป หรือช่องทางอื่นที่เหมาะสม
+        การใช้งานบริการต่อไปหลังจากข้อกำหนดฉบับแก้ไขมีผลใช้บังคับ ถือว่าท่านยอมรับข้อกำหนดฉบับที่แก้ไขแล้ว
+      </p>
+
+      <h2>13. ข้อมูลติดต่อ</h2>
+      <p>
+        หากท่านมีคำถาม ข้อเสนอแนะ คำร้องขอความช่วยเหลือ หรือข้อสอบถามทางกฎหมายเกี่ยวกับข้อกำหนดนี้ กรุณาติดต่อ:
+        <a href="mailto:pimath.studio@gmail.com">pimath.studio@gmail.com</a>
+      </p>
+    </section>
   </main>
 
-  <footer>
-    &copy; 2025 Pimath Studio. All rights reserved.  
-    All content is the intellectual property of the developer.
+  <footer id="footer-text">
+    &copy; 2025 Pimath Studio. All rights reserved.
   </footer>
+
+  <script>
+    function setLanguage(lang) {
+      const isThai = lang === 'th';
+
+      document.documentElement.lang = lang;
+      document.getElementById('lang-en').classList.toggle('active', !isThai);
+      document.getElementById('lang-th').classList.toggle('active', isThai);
+
+      document.getElementById('btn-en').classList.toggle('active', !isThai);
+      document.getElementById('btn-th').classList.toggle('active', isThai);
+
+      document.getElementById('page-title').textContent = isThai
+        ? 'ข้อกำหนดการใช้งาน Pimath'
+        : 'Pimath Terms of Use';
+
+      document.getElementById('footer-text').innerHTML = isThai
+        ? '&copy; 2025 Pimath Studio. สงวนลิขสิทธิ์'
+        : '&copy; 2025 Pimath Studio. All rights reserved.';
+
+      document.querySelectorAll('[data-en][data-th]').forEach(el => {
+        el.textContent = isThai ? el.dataset.th : el.dataset.en;
+      });
+
+      localStorage.setItem('pimath_lang', lang);
+    }
+
+    const savedLang = localStorage.getItem('pimath_lang') || 'en';
+    setLanguage(savedLang);
+  </script>
 </body>
 </html>
-
-
-
