@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pimath Studio - Credits</title>
+  <link rel="stylesheet" href="assets/style.css" />
+  <style>
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background-color: #fafafa;
+      color: #333;
+      margin: 0;
+      padding: 0 20px 40px;
+      line-height: 1.7;
+    }
+
+    header, footer {
+      text-align: center;
+      padding: 15px;
+    }
+
+    header h1 {
+      color: #222;
+      margin-bottom: 10px;
+    }
+
+    .topbar {
+      max-width: 900px;
+      margin: 0 auto 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    nav {
+      text-align: center;
+    }
+
+    nav a {
+      color: #0078d7;
+      text-decoration: none;
+      margin: 0 5px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .lang-switch {
+      display: inline-flex;
+      border: 1px solid #ddd;
+      border-radius: 999px;
+      overflow: hidden;
+      background: #fff;
+    }
+
+    .lang-switch button {
+      border: none;
+      background: transparent;
+      padding: 8px 14px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .lang-switch button.active {
+      background: #0078d7;
+      color: #fff;
+      font-weight: 600;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    h2 {
+      color: #222;
+      margin-top: 26px;
+      margin-bottom: 10px;
+    }
+
+    p, li {
+      font-size: 16px;
+    }
+
+    ul {
+      padding-left: 22px;
+    }
+
+    .lang {
+      display: none;
+    }
+
+    .lang.active {
+      display: block;
+    }
+
+    .last-updated {
+      color: #666;
+      font-size: 14px;
+      margin-top: -4px;
+      margin-bottom: 20px;
+    }
+
+    footer {
+      font-size: 0.9em;
+      color: #777;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 640px) {
+      body {
+        padding: 0 12px 28px;
+      }
+
+      main {
+        padding: 18px;
+      }
+
+      .topbar {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1 id="page-title">Credits</h1>
+  </header>
+
+  <div class="topbar">
+    <nav>
+      <a href="index.html" data-en="Home" data-th="หน้าแรก">Home</a> |
+      <a href="privacy.html" data-en="Privacy Policy" data-th="นโยบายความเป็นส่วนตัว">Privacy Policy</a> |
+      <a href="terms.html" data-en="Terms of Use" data-th="ข้อกำหนดการใช้งาน">Terms of Use</a> |
+      <a href="credits.html" data-en="Credits" data-th="เครดิต">Credits</a> |
+      <!-- <a href="FAQ.html" data-en="FAQ" data-th="คำถามที่พบบ่อย">FAQ</a> -->
+    </nav>
+
+    <div class="lang-switch" aria-label="Language switcher">
+      <button id="btn-en" class="active" onclick="setLanguage('en')">EN</button>
+      <button id="btn-th" onclick="setLanguage('th')">ไทย</button>
+    </div>
+  </div>
+
+  <main>
+    <section id="lang-en" class="lang active">
+      <p class="last-updated">Last updated: March 24, 2026</p>
+
+      <h2>About This Project</h2>
+      <p>
+        Pimath is created and maintained by <strong>Pimath Studio</strong>.
+        This page is provided to acknowledge the people and resources that support the project.
+      </p>
+
+      <h2>Developer</h2>
+      <ul>
+        <li><strong>Studio:</strong> Pimath Studio</li>
+        <li><strong>Software Developer:</strong>Noppatad T.</li>
+        <li><strong>Contact:</strong> <a href="mailto:pimath.studio@gmail.com">pimath.studio@gmail.com</a></li>
+      </ul>
+
+      <h2>Icon</h2>
+      <ul>
+        <li>Flaticon.com - Premium License</li>
+      </ul>
+
+      <h2>Music &amp; Sound</h2>
+      <p>Audio resources from Pixabay creators:</p>
+      <ul>
+        <li>djartmusic</li>
+        <li>luis_humanoide</li>
+        <li>onetent</li>
+        <li>paulyudin</li>
+        <li>starostin</li>
+        <li>the_mountain</li>
+      </ul>
+
+      <h2>Early Testers</h2>
+      <p>
+        We are still looking for our first group of testers.
+        Thank you for every bit of support.
+      </p>
+
+      <h2>Legal Pages</h2>
+      <p>
+        For more information, please see our
+        <a href="terms.html">Terms of Use</a> and
+        <a href="privacy.html">Privacy Policy</a>.
+      </p>
+    </section>
+
+    <section id="lang-th" class="lang">
+      <p class="last-updated">อัปเดตล่าสุด: 24 มีนาคม 2026</p>
+
+      <h2>เกี่ยวกับโปรเจกต์นี้</h2>
+      <p>
+        Pimath ถูกสร้างและดูแลโดย <strong>Pimath Studio</strong>
+        หน้านี้จัดทำขึ้นเพื่อแสดงเครดิตแก่บุคคลและทรัพยากรต่าง ๆ
+        ที่มีส่วนช่วยสนับสนุนโปรเจกต์นี้
+      </p>
+
+      <h2>ผู้พัฒนา</h2>
+      <ul>
+        <li><strong>สตูดิโอ:</strong> Pimath Studio</li>
+        <li><strong>ผู้พัฒนาซอฟต์แวร์:</strong> Noppatad T.</li>
+        <li><strong>ติดต่อ:</strong> <a href="mailto:pimath.studio@gmail.com">pimath.studio@gmail.com</a></li>
+      </ul>
+
+      <h2>ไอคอน</h2>
+      <ul>
+        <li>Flaticon.com - Premium License</li>
+      </ul>
+
+      <h2>เพลงและเสียงประกอบ</h2>
+      <p>ทรัพยากรเสียงจากผู้สร้างบน Pixabay:</p>
+      <ul>
+        <li>djartmusic</li>
+        <li>luis_humanoide</li>
+        <li>onetent</li>
+        <li>paulyudin</li>
+        <li>starostin</li>
+        <li>the_mountain</li>
+      </ul>
+
+      <h2>ผู้ทดสอบกลุ่มแรก</h2>
+      <p>
+        เรายังต้องการผู้ทดสอบกลุ่มแรก
+        ขอบคุณทุกการสนับสนุน
+      </p>
+
+      <h2>หน้ากฎหมาย</h2>
+      <p>
+        ดูข้อมูลเพิ่มเติมได้ที่
+        <a href="terms.html">ข้อกำหนดการใช้งาน</a>
+        และ
+        <a href="privacy.html">นโยบายความเป็นส่วนตัว</a>
+      </p>
+    </section>
+  </main>
+
+  <footer id="footer-text">
+    &copy; 2025 Pimath Studio. All rights reserved.
+  </footer>
+
+  <script>
+    function setLanguage(lang) {
+      const isThai = lang === 'th';
+
+      document.documentElement.lang = lang;
+      document.getElementById('lang-en').classList.toggle('active', !isThai);
+      document.getElementById('lang-th').classList.toggle('active', isThai);
+
+      document.getElementById('btn-en').classList.toggle('active', !isThai);
+      document.getElementById('btn-th').classList.toggle('active', isThai);
+
+      document.getElementById('page-title').textContent = isThai
+        ? 'เครดิต'
+        : 'Credits';
+
+      document.getElementById('footer-text').innerHTML = isThai
+        ? '&copy; 2025 Pimath Studio. สงวนลิขสิทธิ์'
+        : '&copy; 2025 Pimath Studio. All rights reserved.';
+
+      document.querySelectorAll('[data-en][data-th]').forEach(el => {
+        el.textContent = isThai ? el.dataset.th : el.dataset.en;
+      });
+
+      localStorage.setItem('pimath_lang', lang);
+    }
+
+    const savedLang = localStorage.getItem('pimath_lang') || 'en';
+    setLanguage(savedLang);
+  </script>
+</body>
+</html>
