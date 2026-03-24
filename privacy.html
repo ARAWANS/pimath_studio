@@ -4,61 +4,355 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Pimath Studio - Privacy Policy</title>
-     <link rel="stylesheet" href="assets/style.css" />
-  
+  <link rel="stylesheet" href="assets/style.css" />
+  <style>
+    body {
+      font-family: "Segoe UI", Arial, sans-serif;
+      background-color: #fafafa;
+      color: #333;
+      margin: 0;
+      padding: 0 20px 40px;
+      line-height: 1.7;
+    }
+
+    header, footer {
+      text-align: center;
+      padding: 15px;
+    }
+
+    header h1 {
+      color: #222;
+      margin-bottom: 10px;
+    }
+
+    .topbar {
+      max-width: 900px;
+      margin: 0 auto 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    nav {
+      text-align: center;
+    }
+
+    nav a {
+      color: #0078d7;
+      text-decoration: none;
+      margin: 0 5px;
+    }
+
+    nav a:hover {
+      text-decoration: underline;
+    }
+
+    .lang-switch {
+      display: inline-flex;
+      border: 1px solid #ddd;
+      border-radius: 999px;
+      overflow: hidden;
+      background: #fff;
+    }
+
+    .lang-switch button {
+      border: none;
+      background: transparent;
+      padding: 8px 14px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .lang-switch button.active {
+      background: #0078d7;
+      color: #fff;
+      font-weight: 600;
+    }
+
+    main {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    }
+
+    h2 {
+      color: #222;
+      margin-top: 26px;
+      margin-bottom: 10px;
+    }
+
+    p, li {
+      font-size: 16px;
+    }
+
+    ul {
+      padding-left: 22px;
+    }
+
+    footer {
+      font-size: 0.9em;
+      color: #777;
+      margin-top: 40px;
+    }
+
+    .lang {
+      display: none;
+    }
+
+    .lang.active {
+      display: block;
+    }
+
+    .last-updated {
+      color: #666;
+      font-size: 14px;
+      margin-top: -4px;
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 640px) {
+      body {
+        padding: 0 12px 28px;
+      }
+
+      main {
+        padding: 18px;
+      }
+
+      .topbar {
+        flex-direction: column;
+      }
+    }
+  </style>
 </head>
 <body>
-   <header>
-    <h1>Privacy Policy</h1>
-    <nav>
-      <a href="index.html">Home</a> |
-      <a href="privacy.html">Privacy Policy</a> |
-      <a href="terms.html">Terms of Use</a> |
-      <a href="profile.html">Profile</a> |
-      <a href="FAQ.html">FAQ</a>
-    </nav>
+  <header>
+    <h1 id="page-title">Privacy Policy</h1>
   </header>
 
+  <div class="topbar">
+    <nav>
+      <a href="index.html" data-en="Home" data-th="หน้าแรก">Home</a> |
+      <a href="privacy.html" data-en="Privacy Policy" data-th="นโยบายความเป็นส่วนตัว">Privacy Policy</a> |
+      <a href="terms.html" data-en="Terms of Use" data-th="ข้อกำหนดการใช้งาน">Terms of Use</a> |
+      <a href="profile.html" data-en="Profile" data-th="โปรไฟล์">Profile</a> |
+      <a href="FAQ.html" data-en="FAQ" data-th="คำถามที่พบบ่อย">FAQ</a>
+    </nav>
+
+    <div class="lang-switch" aria-label="Language switcher">
+      <button id="btn-en" class="active" onclick="setLanguage('en')">EN</button>
+      <button id="btn-th" onclick="setLanguage('th')">ไทย</button>
+    </div>
+  </div>
+
   <main>
-    <h2>Introduction</h2>
-    <p>
-      Your privacy is important to us. Pimath Studio is committed to ensuring that your data is protected.
-    </p>
+    <!-- English -->
+    <section id="lang-en" class="lang active">
+      <p class="last-updated">Last updated: March 24, 2026</p>
 
-    <h2>No Personal Data Collected</h2>
-    <p>
-      Pimath Studio does not collect, store, or share any personal information. 
-      The app operates fully on your device without sending data to external servers.
-    </p>
+      <h2>1. Introduction</h2>
+      <p>
+        Pimath Studio ("Pimath", "we", "us", or "our") respects your privacy.
+        This Privacy Policy explains what personal data we collect, how we use it,
+        and the choices available to users of our website, mobile application,
+        and related services (collectively, the "Service").
+      </p>
 
-    <h2>Permissions</h2>
-    <p>
-      Pimath Studio only requests essential permissions required for its functionality. 
-      No data is transmitted or used for tracking purposes.
-    </p>
+      <h2>2. Personal Data We Collect</h2>
+      <p>
+        We collect only the <strong>email address</strong> associated with your account or sign-in method.
+        We do <strong>not intentionally collect or store your name</strong> as part of the normal operation of the Service.
+      </p>
+      <p>
+        If you use the Service as a guest and do not sign in, we may not collect your email address.
+      </p>
 
-    <h2>Children’s Privacy</h2>
-    <p>
-      Pimath Studio is safe for all ages. Since no personal data is collected, 
-      the app complies with child privacy protection guidelines.
-    </p>
+      <h2>3. How We Use Your Email Address</h2>
+      <p>We use your email address only for purposes related to providing the Service, such as:</p>
+      <ul>
+        <li>creating or maintaining your account;</li>
+        <li>enabling sign-in and account recovery;</li>
+        <li>saving or syncing your progress where available;</li>
+        <li>responding to support or account-related requests;</li>
+        <li>communicating important notices related to the Service, if necessary.</li>
+      </ul>
 
-    <h2>Contact</h2>
-    <p>
-      If you have any questions about this Privacy Policy, please contact us at:
-      <a href="mailto:pimath.studio@gmail.com">pimath.studio@gmail.com</a>
-    </p>
+      <h2>4. What We Do Not Collect</h2>
+      <p>
+        We do not intentionally collect your full name as part of the normal use of the Service.
+        We also do not state in this Privacy Policy that we collect personal data beyond your email address,
+        except where required by law or where limited technical data is processed by third-party platforms necessary to operate the Service.
+      </p>
+
+      <h2>5. Sharing of Data</h2>
+      <p>
+        We do not sell your personal data.
+        We may use service providers or platforms necessary to operate the Service,
+        such as login providers, hosting services, analytics tools, app distribution platforms, or payment platforms.
+        These third parties may process limited data as necessary for their services under their own terms and privacy policies.
+      </p>
+
+      <h2>6. Data Retention</h2>
+      <p>
+        We retain your email address only for as long as reasonably necessary to operate your account,
+        provide the Service, comply with legal obligations, resolve disputes, prevent abuse, or enforce our agreements.
+      </p>
+
+      <h2>7. Your Rights</h2>
+      <p>
+        Subject to applicable law, you may request access to, correction of, or deletion of your personal data
+        by contacting us at the email address below.
+      </p>
+
+      <h2>8. Age Requirement</h2>
+      <p>
+        The Service is intended for users who are legally able to use it under applicable law.
+        By using the Service, you confirm that you are of legal age in your jurisdiction,
+        or that you are using the Service with the involvement, consent, or supervision of your parent or legal guardian.
+      </p>
+
+      <h2>9. Children and Parents</h2>
+      <p>
+        If a parent, guardian, or legal representative believes that a child has provided personal data to us
+        in a way that should not have occurred, they may contact us to request review or deletion, subject to applicable law.
+      </p>
+
+      <h2>10. Changes to This Policy</h2>
+      <p>
+        We may update this Privacy Policy from time to time.
+        Any material changes may be posted on the website, in the app, or through other reasonable means.
+      </p>
+
+      <h2>11. Contact</h2>
+      <p>
+        If you have any questions about this Privacy Policy or your personal data, please contact us at:
+        <a href="mailto:pimath.studio@gmail.com">pimath.studio@gmail.com</a>
+      </p>
+    </section>
+
+    <!-- Thai -->
+    <section id="lang-th" class="lang">
+      <p class="last-updated">อัปเดตล่าสุด: 24 มีนาคม 2026</p>
+
+      <h2>1. บทนำ</h2>
+      <p>
+        Pimath Studio ("Pimath", "เรา") เคารพความเป็นส่วนตัวของผู้ใช้
+        นโยบายความเป็นส่วนตัวฉบับนี้อธิบายว่าเราเก็บข้อมูลส่วนบุคคลอะไรบ้าง
+        ใช้อย่างไร และผู้ใช้มีทางเลือกใดบ้างในการใช้เว็บไซต์ แอปพลิเคชันมือถือ
+        และบริการที่เกี่ยวข้องของเรา (รวมเรียกว่า "บริการ")
+      </p>
+
+      <h2>2. ข้อมูลส่วนบุคคลที่เราเก็บ</h2>
+      <p>
+        เราเก็บเพียง <strong>อีเมล (email address)</strong> ที่เชื่อมโยงกับบัญชีหรือวิธีการเข้าสู่ระบบของท่านเท่านั้น
+        โดยเรา <strong>ไม่ได้มีเจตนาเก็บหรือจัดเก็บชื่อของท่าน</strong> เป็นส่วนหนึ่งของการให้บริการตามปกติ
+      </p>
+      <p>
+        หากท่านใช้งานแบบ Guest และไม่ได้เข้าสู่ระบบ เราอาจไม่เก็บอีเมลของท่าน
+      </p>
+
+      <h2>3. วัตถุประสงค์ในการใช้อีเมล</h2>
+      <p>เราใช้อีเมลของท่านเฉพาะเท่าที่จำเป็นต่อการให้บริการ เช่น</p>
+      <ul>
+        <li>สร้างหรือดูแลบัญชีผู้ใช้;</li>
+        <li>รองรับการเข้าสู่ระบบและการกู้คืนบัญชี;</li>
+        <li>บันทึกหรือซิงก์ความก้าวหน้าในกรณีที่มีฟีเจอร์ดังกล่าว;</li>
+        <li>ตอบกลับคำขอความช่วยเหลือหรือคำขอที่เกี่ยวกับบัญชี;</li>
+        <li>แจ้งข้อมูลสำคัญที่เกี่ยวข้องกับการให้บริการเมื่อจำเป็น</li>
+      </ul>
+
+      <h2>4. สิ่งที่เราไม่ได้เก็บ</h2>
+      <p>
+        เราไม่ได้มีเจตนาเก็บชื่อ-นามสกุลของท่านเป็นส่วนหนึ่งของการใช้งานบริการตามปกติ
+        และในนโยบายฉบับนี้ เราไม่ได้ระบุว่าเก็บข้อมูลส่วนบุคคลอื่นนอกเหนือจากอีเมลของท่าน
+        เว้นแต่เป็นกรณีที่กฎหมายกำหนด หรือเป็นข้อมูลทางเทคนิคที่ผู้ให้บริการภายนอกจำเป็นต้องประมวลผลเพื่อให้บริการทำงานได้
+      </p>
+
+      <h2>5. การเปิดเผยหรือแบ่งปันข้อมูล</h2>
+      <p>
+        เราไม่ขายข้อมูลส่วนบุคคลของท่าน
+        อย่างไรก็ตาม เราอาจใช้ผู้ให้บริการหรือแพลตฟอร์มภายนอกที่จำเป็นต่อการให้บริการ
+        เช่น ผู้ให้บริการเข้าสู่ระบบ ระบบโฮสต์ ระบบวิเคราะห์การใช้งาน แพลตฟอร์มเผยแพร่แอป หรือระบบชำระเงิน
+        โดยบุคคลภายนอกดังกล่าวอาจประมวลผลข้อมูลบางส่วนเท่าที่จำเป็นตามเงื่อนไขและนโยบายความเป็นส่วนตัวของตน
+      </p>
+
+      <h2>6. ระยะเวลาการเก็บข้อมูล</h2>
+      <p>
+        เราจะเก็บอีเมลของท่านไว้เท่าที่จำเป็นอย่างสมเหตุสมผลเพื่อดูแลบัญชี ให้บริการ
+        ปฏิบัติตามกฎหมาย ระงับข้อพิพาท ป้องกันการใช้งานที่ไม่เหมาะสม หรือบังคับใช้ข้อตกลงของเรา
+      </p>
+
+      <h2>7. สิทธิของท่าน</h2>
+      <p>
+        ภายใต้กฎหมายที่ใช้บังคับ ท่านอาจมีสิทธิขอเข้าถึง แก้ไข หรือลบข้อมูลส่วนบุคคลของท่าน
+        โดยติดต่อเราตามอีเมลที่ระบุไว้ด้านล่าง
+      </p>
+
+      <h2>8. เงื่อนไขด้านอายุ</h2>
+      <p>
+        บริการนี้มีไว้สำหรับผู้ใช้ที่สามารถใช้งานได้โดยชอบด้วยกฎหมายตามกฎหมายที่ใช้บังคับ
+        เมื่อท่านใช้บริการนี้ ถือว่าท่านยืนยันว่าท่านมีอายุถึงเกณฑ์ตามกฎหมายที่เกี่ยวข้อง
+        หรือใช้งานบริการโดยมีผู้ปกครองหรือผู้แทนโดยชอบด้วยกฎหมายมีส่วนร่วม ให้ความยินยอม หรือกำกับดูแล
+      </p>
+
+      <h2>9. เด็กและผู้ปกครอง</h2>
+      <p>
+        หากผู้ปกครองหรือผู้แทนโดยชอบด้วยกฎหมายเห็นว่าเด็กได้ให้ข้อมูลส่วนบุคคลแก่เรา
+        ในลักษณะที่ไม่ควรเกิดขึ้น ท่านสามารถติดต่อเราเพื่อขอให้ตรวจสอบหรือพิจารณาลบข้อมูลได้
+        ทั้งนี้เป็นไปตามกฎหมายที่ใช้บังคับ
+      </p>
+
+      <h2>10. การเปลี่ยนแปลงนโยบายนี้</h2>
+      <p>
+        เราอาจปรับปรุงนโยบายความเป็นส่วนตัวนี้เป็นครั้งคราว
+        หากมีการเปลี่ยนแปลงสาระสำคัญ เราอาจประกาศผ่านเว็บไซต์ แอป หรือช่องทางอื่นที่เหมาะสม
+      </p>
+
+      <h2>11. ติดต่อเรา</h2>
+      <p>
+        หากท่านมีคำถามเกี่ยวกับนโยบายความเป็นส่วนตัวนี้หรือข้อมูลส่วนบุคคลของท่าน กรุณาติดต่อ:
+        <a href="mailto:pimath.studio@gmail.com">pimath.studio@gmail.com</a>
+      </p>
+    </section>
   </main>
 
-  <footer>
+  <footer id="footer-text">
     &copy; 2025 Pimath Studio. All rights reserved.
   </footer>
+
+  <script>
+    function setLanguage(lang) {
+      const isThai = lang === 'th';
+
+      document.documentElement.lang = lang;
+      document.getElementById('lang-en').classList.toggle('active', !isThai);
+      document.getElementById('lang-th').classList.toggle('active', isThai);
+
+      document.getElementById('btn-en').classList.toggle('active', !isThai);
+      document.getElementById('btn-th').classList.toggle('active', isThai);
+
+      document.getElementById('page-title').textContent = isThai
+        ? 'นโยบายความเป็นส่วนตัว'
+        : 'Privacy Policy';
+
+      document.getElementById('footer-text').innerHTML = isThai
+        ? '&copy; 2025 Pimath Studio. สงวนลิขสิทธิ์'
+        : '&copy; 2025 Pimath Studio. All rights reserved.';
+
+      document.querySelectorAll('[data-en][data-th]').forEach(el => {
+        el.textContent = isThai ? el.dataset.th : el.dataset.en;
+      });
+
+      localStorage.setItem('pimath_lang', lang);
+    }
+
+    const savedLang = localStorage.getItem('pimath_lang') || 'en';
+    setLanguage(savedLang);
+  </script>
 </body>
 </html>
-
-
-
-
-
-
-
